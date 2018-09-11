@@ -6,7 +6,7 @@ ENV INITSYSTEM off
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 
-EXPOSE 8080
+EXPOSE 8082
 
 VOLUME ["/data"]
 
