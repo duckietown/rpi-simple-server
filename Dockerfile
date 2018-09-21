@@ -1,13 +1,9 @@
-FROM maidbot/resin-raspberrypi3-qemu
+FROM resin/raspberrypi3-alpine-python
 
-#switch on systemd init system in container
-ENV INITSYSTEM off
-
-COPY . /usr/src/app
-WORKDIR /usr/src/app
+ENV QEMU_EXECVE 1
 
 EXPOSE 8082
+VOLUME /data
+WORKDIR /data
 
-VOLUME ["/data"]
-
-CMD ["bash","start.sh"]
+CMD ["python -m SimpleHTTPServer 8082"]
