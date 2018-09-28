@@ -6,4 +6,4 @@ EXPOSE 8082
 VOLUME /data
 WORKDIR /data
 
-CMD ["python -m SimpleHTTPServer 8082"]
+CMD python -m SimpleHTTPServer 8082
