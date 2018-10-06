@@ -1,4 +1,4 @@
-FROM resin/raspberrypi3-alpine-python
+FROM duckietown/rpi-duckiebot-raspberrypi3-python:master18
 
 ENV QEMU_EXECVE 1
 
